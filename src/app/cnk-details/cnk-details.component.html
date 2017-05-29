@@ -1,0 +1,30 @@
+<div class="container">
+
+    <dl class="list">
+        <dt>Project Name</dt>
+        <dd>{{ cnk.select_project }}</dd>
+        <dt>Project Assign To</dt>
+        <dd>{{ cnk.project_assign_to }}</dd>
+        <dt>Project Members</dt>
+        <dd>{{ cnk.count_project_member }}</dd>
+        <dt>Frontend Design</dt>
+        <dd>{{ cnk.frontend_design }}</dd>
+        <dt>Backend</dt>
+        <dd>{{ cnk.backend }}</dd>
+        <dt>Services Used</dt>
+        <dd>{{ cnk.services_used }}</dd>
+        <dt>Explanation</dt>
+        <dd>{{ cnk.explanation }}</dd>
+        <dt>Created Date</dt>
+        <dd>{{ cnk.created_at }}</dd>
+        <dt>Update Date</dt>
+        <dd>{{ cnk.updated_at }}</dd>
+    </dl>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a [routerLink]="['/cnk-edit', cnk._id]" class="btn btn-success">EDIT</a>
+        <button class="btn btn-danger" type="button" (click)="deleteCnk(cnk._id)">DELETE</button>
+        <a [routerLink]="['/cnks']" class="btn btn-success">Back</a>
+    </div>
+</div>

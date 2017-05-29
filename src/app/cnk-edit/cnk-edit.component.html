@@ -1,0 +1,48 @@
+<div class="container">
+    <h1>Edit Book</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <form (ngSubmit)="updateCnk(cnk._id)" #cnkForm="ngForm">
+                <div class="form-group">
+                    <label for="name">Project Name</label>
+                    <select class="form-control" [(ngModel)]="cnk.select_project" name="select_project" required>
+                    <option value="MDM">MDM</option>
+                    <option value="Booking Engine">Booking Engine</option>
+                    <option value="BRE">BRE</option>
+                    <option value="SI">SI</option>
+                    </select>
+
+
+                </div>
+                <div class="form-group">
+                    <label for="name">Project Assign To</label>
+                    <input type="text" class="form-control" [(ngModel)]="cnk.project_assign_to" name="project_assign_to" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Project Members</label>
+                    <input type="number" class="form-control" [(ngModel)]="cnk.count_project_member" name="count_project_member" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Frontend Design</label>
+                    <input type="text" class="form-control" [(ngModel)]="cnk.frontend_design" name="frontend_design" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Backend</label>
+                    <input type="text" class="form-control" [(ngModel)]="cnk.backend" name="backend" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Services Used</label>
+                    <input type="text" class="form-control" [(ngModel)]="cnk.services_used" name="services_used" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Explanation</label>
+                    <input type="text" class="form-control" [(ngModel)]="cnk.explanation" name="explanation" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success" [disabled]="!cnkForm.form.valid">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
