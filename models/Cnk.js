@@ -3,7 +3,10 @@ var mongoose = require('mongoose');
 var CnkSchema = new mongoose.Schema({
     select_project: String,
     project_assign_to: String,
-    count_project_member: Number,
+    count_project_member: {
+        type: Number,
+        required: true
+    },
     frontend_design: String,
     backend: String,
     services_used: String,
